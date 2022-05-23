@@ -1,0 +1,17 @@
+tenant:
+  namespace: "t0000"
+  subDomain: "stark-industries"
+  apps:
+    - name: "E01_3_2"
+      version: "1.0"
+    - name: "E01_2_2"
+      version: "1.0"
+    - name: "E02_1_2"
+      version: "1.0"
+    - name: "E01_3_1"
+      version: "1.0"
+    - name: "E01_1_2"
+      version: "1.0"
+baseDomain: "mydomain.es"
+applicationPath: "/app"
+

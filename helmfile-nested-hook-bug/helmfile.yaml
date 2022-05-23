@@ -1,0 +1,16 @@
+bases:
+ - ./bases/environments.yaml
+---
+
+hooks:
+  - events: ["cleanup"]
+    showlogs: true
+    command: "./on-cleanup"
+    args:
+      - '-c{{`{{.HelmfileCommand}}`}}'
+      - '-t{{`{{.Environment.Values.tenant.namespace}}`}}'
+
+helmfiles:
+  - path: ./sub-helmfiles/*.yaml
+    values:
+      - ./environments/default/values.yaml

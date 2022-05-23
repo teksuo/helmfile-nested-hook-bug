@@ -1,0 +1,13 @@
+releases:
+  - name: postgresql
+    namespace: {{ .Values.tenant.namespace }}
+    createNamespace: true
+    chart: bitnami/postgresql
+    wait: true
+    hooks:
+      - events: ["postsync", "postuninstall"]
+        showlogs: true
+        command: ./on-release
+        args:
+          - '{{`{{ if .Event.Error }}-f{{ else }}-s{{ end }}`}}'
+          - '{{`{{ .Release.Name }}`}}'

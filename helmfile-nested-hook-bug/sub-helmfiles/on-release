@@ -1,0 +1,7 @@
+#!/bin/bash
+
+################################################
+# Callback script for individual failure hooks #
+################################################
+
+echo "ON-RELEASE!!!"

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+##########################################
+# Callback script for global final hook  #
+##########################################
+echo "ON-CLEANUP!!!"
